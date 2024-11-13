@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Make navbar fixed at the top */
+  top: 0;          /* Position at the top of the screen */
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  z-index: 10;
+  background-color: #c18f8f;
+  left: 0;
+}
+
+.navbar-left a {
+  margin-right: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+
+.cart-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+/*Banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1);
+}
+
+.banner-content {
+  position: absolute;
+  color: white;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.banner-button {
+  padding: 0.5px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #0056b3;
+}
+
+/* All products */
+.all-products {
+  width: 100%;
+}
+
+.all-products ul li {
+  width: 70%;
+  color: black;
+}
+
+/* Product Details */
+.product-detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.product-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.product-image-container img {
+  max-width: 50%;
+}
+
+.product-info-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.product-info-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between star and button */
+}
+
+
+.add-to-cart-button {
+  background-color: #f20707;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 2.5rem; 
+  height: 2.5rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-to-cart-button:hover {
+  background-color: #970505;
+}
+.Download {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.Download:hover{
+  background-color: #005f7c;
+}
+/* Add product form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  margin-top: 5rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.form-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0062cc;
+}
+
+
+/* display all products */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.product {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.product img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.product-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.product button {
+  background-color: transparent;
+  border: 1px solid #005f7c;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.product-sort {
+  display: flex;
+  width: 70%;
+  margin: 10px auto;
+}
+
+.product-sort button {
+  margin: 0 10px;
+  padding: 0px 20px;
+  background-color: transparent;
+  border:1px solid #008CBA;
+  cursor: pointer;
+}
+
+.product-sort button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.sort-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.sort-tag-cross {
+  color: red;
+  font-size: small;
+  cursor: pointer;
+}
+
+/* flash Messages */
+.flash-message {
+  position: fixed;
+  top: 100px; /* Adjust this based on the navbar height */
+  left: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Adjusted for better readability */
+  color: white;
+  width: 250px;
+  height: 40px;
+  padding: 0.2rem 0.2rem;
+  border-radius: 0.9rem;
+  background-color: rgb(233, 90, 90);
+  z-index: 1000; /* Ensures it appears above other elements */
+}
+
+.flash-message button {
+  margin-left: 0.5rem;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
